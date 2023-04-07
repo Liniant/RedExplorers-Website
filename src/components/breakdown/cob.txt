@@ -1,0 +1,57 @@
+// import * as React from 'react';
+// import Table from '@mui/material/Table';
+// import TableBody from '@mui/material/TableBody';
+// import TableCell from '@mui/material/TableCell';
+// import TableContainer from '@mui/material/TableContainer';
+// import TableHead from '@mui/material/TableHead';
+// import TableRow from '@mui/material/TableRow';
+// import Paper from '@mui/material/Paper';
+// import "./col.css"
+//
+//
+// export default function CostOfLivingBreakdown() {
+//     return (
+//         <div className="break">
+//             <TableContainer component={Paper}>
+//                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
+//                     <TableHead>
+//                         <TableRow>
+//                             <TableCell>Icons</TableCell>
+//                             <TableCell align="right">Expenses</TableCell>
+//                             <TableCell align="right">Port Louis</TableCell>
+//                             <TableCell align="right">Harare</TableCell>
+//                             <TableCell align="right">Percentage Difference</TableCell>
+//                         </TableRow>
+//                     </TableHead>
+//                     <TableBody>
+//                         <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+//                             <TableCell component="th" scope="row" sx={{ color: "white" }}> Taxi, price for 1 hour Waiting, Normal Tariff  </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}>{ values[0] }</TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { values[8] } </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { ((values[8] - values[0])/values[0] * 100).toFixed(2) }% </TableCell>
+//                         </TableRow>
+//                         <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+//                             <TableCell component="th" scope="row" sx={{ color: "white" }}> Average Monthly Net Salary, After Tax </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}>{ values[1] }</TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { values[9] } </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { ((values[9] - values[1])/values[1] * 100).toFixed(2) }% </TableCell>
+//                         </TableRow>
+//                         <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+//                             <TableCell component="th" scope="row" sx={{ color: "white" }}> Eggs, 12 pack  </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}>{ values[2] }</TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { values[10] } </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { ((values[10] - values[2])/values[2] * 100).toFixed(2) }% </TableCell>
+//                         </TableRow>
+//                         <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+//                             <TableCell component="th" scope="row" sx={{ color: "white" }}> Milk, Regular,1 liter </TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}>{ values[3] }</TableCell>
+//                             <TableCell align="center" sx={{ color: "white" }}> { values[11] }</TableCell>
+//                             {/*<TableCell align="center" sx={{ color: "white" }}> { ((values[11] - values[3])/values[3] * 100).toFixed(2) }% </TableCell>*/}
+//                         </TableRow>
+//                     </TableBody>
+//                 </Table>
+//             </TableContainer>
+//         </div>
+//
+//         )
+//     }

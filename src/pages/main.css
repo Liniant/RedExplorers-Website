@@ -1,0 +1,377 @@
+.main{
+    /*background-color :#003559;*/
+    height:100vh;
+    background-image: url("https://images.pexels.com/photos/5608332/pexels-photo-5608332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+}
+
+
+/*Styling home hero*/
+.main-section{
+    font-size : 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    color: white;
+    margin-top: 10%;
+    box-sizing: border-box;
+    padding : 20px;
+    justify-content : center;
+
+}
+
+.mtext-side{
+    display: flex;
+    flex-flow :column wrap;
+    justify-content :space-evenly;
+    box-sizing: border-box;
+    flex : 1.5;
+    margin-left:3.5%;
+}
+
+.mtext-big{
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom : 2%;
+}
+
+
+.btn{
+    display: inline-block;
+    background-color : #0336FF;
+    padding : 15px;
+    border-radius :15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color : white;
+    color:#3880D0 ;
+
+}
+
+.linka:hover{
+    background-color : white;
+    color:#3880D0 ;
+
+}
+
+
+
+
+
+/*Styling the about us page*/
+.contact{
+    background-color : #EEEEEE;
+    height : 100vh;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+.contact-sections{
+    display : flex;
+    margin : 4%;
+}
+
+.get-in-touch{
+    flex : 1;
+}
+
+.form-side{
+    flex : 2;
+
+}
+.chead-text{
+    font-weight : bold;
+}
+
+.csection-text{
+    display : flex;
+    margin-bottom: 5%;
+}
+
+.cicon{
+   display: flex;
+    align-items: center;
+}
+
+.icon-text{
+    display: flex;
+    flex-flow: column wrap;
+    padding : 10px;
+}
+
+.itext{
+  font-size : 1.5rem;
+}
+
+.itext:first-child{
+    font-weight : bold;
+}
+
+.soc-icons{
+    display: flex;
+    gap : 5%;
+}
+
+.sicon{
+    width : 50px;
+    height : 50px;
+    margin-left: 5%;
+    font-size: 30px;
+}
+
+/*Styling the input form*/
+
+.form{
+   height: 100%;
+    background-color: #C3C3C3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-right:10px;
+}
+
+.fsect{
+ display: flex;
+    flex-flow: row wrap;
+    margin-bottom : 2%;
+}
+
+.fgroup{
+  display: flex;
+    flex-flow: column wrap;
+    margin-left : 4%;
+    flex :1;
+}
+
+.label{
+   font-weight :bold;
+    padding : 15px;
+
+}
+
+.input{
+    border-radius : 5px;
+    outline: none;
+    border :none;
+    height : 40px;
+    width:95%;
+}
+
+.textarea{
+    border-radius : 5px;
+    outline: none;
+    border :none;
+    height: 100px;
+
+}
+
+/*Styling services page*/
+.services{
+    /*background-color : #EEEEEE;*/
+    height : 100vh;
+}
+
+/*Stying compare page*/
+.services-comp{
+    /*background-color : #EEEEEE;*/
+    font-size : 100%;
+    height : 100vh;
+}
+
+.shero{
+    height: 65vh;
+    background-image: url("https://images.pexels.com/photos/144251/yosemite-national-park-landscape-california-144251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+
+}
+
+.serviceshero{
+    height: 65vh;
+    background-image: url("https://images.pexels.com/photos/1659437/pexels-photo-1659437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+
+}
+
+
+.shero-text{
+    text-align: center;
+    font-weight : bold;
+    font-size: 3.5rem;
+    color:white;
+    margin-top : 10%;
+}
+
+.where{
+    display: flex;
+    margin : 3%;
+
+}
+
+.where-text{
+    flex:2;
+}
+
+.wtext{
+
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding : 1%;
+}
+
+.wspan{
+    color: #FFA500;
+}
+
+
+
+.wstext{
+    flex : 1.5;
+    padding : 2%;
+}
+
+.sbar{
+    background-color : green;
+    width : 100%;
+}
+
+.col-sect{
+    background-color : rgba(11, 105, 100, 0.93);
+}
+.main-text{
+    /*margin-left: 30%;*/
+    font-weight : bold;
+    font-size : 1.9rem;
+    margin-top: 4%;
+    padding: 15px 15px 15px 0;
+    /*text-align: center;*/
+}
+
+.smain-text{
+    /*margin-left: 30%;*/
+    font-weight : bold;
+    font-size : 1.9rem;
+    margin-top: 4%;
+    padding: 15px 15px 15px 0;
+    text-align: center;
+}
+
+
+
+.compares{
+ display: flex;
+    align-items: center;
+    margin-left : 2%;
+    margin-right : 2%;
+}
+
+.f-input{
+    height: 25px;
+
+}
+
+.f-inputs{
+    height: 45px;
+    width : 100%;
+}
+
+.f-section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column wrap;
+
+
+}
+
+.first-text{
+   text-align: center;
+    padding : 10px;
+    font-weight: bold;
+
+}
+
+.second-text{
+    font-weight: bold;
+    font-size : 2rem;
+    margin-bottom: 2%;
+}
+
+
+
+
+/*Styling the about us page*/
+
+.about-us{
+    height : 100%;
+    box-sizing: border-box;
+
+}
+
+.about-cont{
+    position : relative;
+    margin-top: 5%;
+    height: 100vh;
+}
+.ano-bio{
+    background-color : #0D716B;
+    color : white;
+    display : flex;
+    /*flex-flow : row wrap;*/
+    width : 65%;
+    height : 70vh;
+    margin-left : 20%;
+    box-sizing: border-box;
+
+    position: absolute;
+}
+
+.ano-side{
+    margin: 2%;
+}
+.ano{
+  width : 250px;
+    height : 250px;
+    object-fit: cover;
+    border-radius : 50%;
+    margin: 10% 2% 2%;
+}
+
+.text-side{
+    margin : 2%;
+    padding-bottom: 5%;
+}
+
+.a-text{
+    margin-bottom : 4%;
+}
+
+
+@media only screen and (max-width: 390px){
+    .ano-bio{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ano{
+        width: 80%;
+    }
+
+    .btnn{
+        margin: 0;
+    }
+}
+
+
+
+
+

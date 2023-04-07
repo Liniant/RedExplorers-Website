@@ -1,0 +1,229 @@
+import React from "react";
+import { Pie } from "react-chartjs-2";
+
+const data = {
+  labels: ["Section A", "Section B", "Section C"],
+  datasets: [
+    {
+      data: [50, 30, 20],
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+    },
+  ],
+};
+
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  legend: {
+    position: "right",
+  },
+};
+
+export default function Piechart() {
+  return <Pie data={data} options={options} />;
+};
+
+ PieChartWithColorsAndLegend;
+
+ import "./piechart.css"
+ import { PieChart, Pie, Legend, Tooltip, Cell } from "recharts";
+
+ const data = [
+     { name: "Section A", value: 50 },
+     { name: "Section B", value: 30 },
+     { name: "Section C", value: 20 },
+ ];
+
+ const COLORS = ["#0088FE", "#00C49F", "#FFBB28"];
+
+ export default function Piechart(props) {
+     return(
+         <>
+             <PieChart width={400} height={400}>
+                 <Pie
+                     data={data}
+                     dataKey="value"
+                     nameKey="name"
+                     cx="50%"
+                     cy="50%"
+                     innerRadius={50}
+                     outerRadius={100}
+                     fill="#8884d8"
+                     paddingAngle={5}
+                     label
+                 >
+                     {data.map((entry, index) => (
+                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                     ))}
+                 </Pie>
+                 <Pie
+                     data={[{ value: 100 }]}
+                     cx="50%"
+                     cy="50%"
+                     innerRadius={40}
+                     outerRadius={50}
+                     fill="#f0f0f0"
+                     paddingAngle={0}
+                 />
+                 <Tooltip />
+                 <Legend/>
+             </PieChart>
+         </>
+     )
+ }
+
+    useEffect( (async ()=>{
+             let endpoint = `https://cost-of-living-and-prices.p.rapidapi.com/prices?country_name=Zimbabwe`
+          // let coun
+          //    if(country){
+          //        endpoint = `https://cost-of-living-and-prices.p.rapidapi.com/prices?country_name=${country}`
+          //    }
+             let response =  await fetch(endpoint,header);
+             let dataObject = await response.json();
+             let transport=  dataObject["prices"][44]["usd"]["avg"]
+             let accomodation= dataObject["prices"][0]["usd"]["avg"]
+             let clothing= dataObject["prices"][0]["usd"]["avg"]
+             let food = dataObject["prices"][46]["usd"]["avg"]  + dataObject["prices"][47]["usd"]["avg"]
+             setFood(food)
+             setTransport(transport)
+             setAccomodation(accomodation)
+             setClothing(clothing)
+         console.log(transport)
+
+         })(),[])
+
+            useEffect( ()=>{
+            async function getDetails(){
+                                  let endpoint = `https://cost-of-living-and-prices.p.rapidapi.com/prices?country_name=Zimbabwe`
+
+                               //    if(country){
+                               //        endpoint = `https://cost-of-living-and-prices.p.rapidapi.com/prices?country_name=${country}`
+                               //    }
+                                  let response =  await fetch(endpoint,header);
+                                  let dataObject = await response.json();
+                                  let transport=  dataObject["prices"][44]["usd"]["avg"]
+                                  let accomodation= dataObject["prices"][0]["usd"]["avg"]
+                                  let clothing= dataObject["prices"][0]["usd"]["avg"]
+                                  let food = dataObject["prices"][46]["usd"]["avg"]  + dataObject["prices"][47]["usd"]["avg"]
+                                  setFood(food)
+                                  setTransport(transport)
+                                  setAccomodation(accomodation)
+                                  setClothing(clothing)
+                              console.log(transport)
+
+            } getDetails();},[])
+
+
+Price per square meter to Buy Apartment   name= data["prices"][0]["item_name"] value =data["prices"][0]["usd"]["avg"]
+Pair of Jeans in a Chain Store Like George, H&M, Zara  name=data["prices"][4]["item_name"] value=data["prices"][4]["usd"]["avg"]
+
+
+White Rice, 1 kg    data["prices"][22]["item_name"]
+Tomato, 1 kg   data["prices"][23]["item_name"]
+Domestic Beer, 0.5 liter Draught   data["prices"][23]["item_name"]
+McMeal at McDonalds or Alternative Combo Meal  data["prices"][33]["item_name"]
+Meal for 2 People, Mid-range Restaurant, Three-course data["prices"][37]["item_name"]
+
+
+Fitness Club, Monthly Fee for 1 Adult  data["prices"][38]["item_name"]
+Gasoline, 1 liter     data["prices"][40]["item_name"]
+
+Taxi, price for 1 km, Normal Tariff   data["prices"][44]["item_name"]
+Prepaid Mobile Tariff Local, price per 1 min, No Discounts or Plans  data["prices"][47]["item_name"]
+
+
+Taxi, price for 1 hour Waiting, Normal Tariff    data["prices"][43]["item_name"]  data["prices"][43]["usd"]["avg"]
+Average Monthly Net Salary, After Tax  data["prices"][36]["item_name"]
+"Eggs, 12 pack   name= data["prices"][13]["item_name"]
+Milk, Regular,1 liter    data["prices"][17]["item_name"]
+Loaf of Fresh White Bread, 0.5 kg  name =data["prices"][15]["item_name"]
+Meal in Inexpensive Restaurant   data["prices"][35]["item_name"]
+Basic utilities for 85 square meter Apartment including Electricity, Heating or Cooling, Water and Garbage  data["prices"][48]["item_name"]
+Internet, 60 Mbps or More, Unlimited Data, Cable/ADSL data["prices"][50]["item_name"]
+
+
+
+
+import * as React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import "./col.css"
+import  { values } from "../../pages/ServicesCompare"
+
+
+
+export default function CostOfLivingBreakdown({values}) {
+    return (
+        <div className="break">
+        <TableContainer component={Paper} >
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Icons</TableCell>
+                        <TableCell align="right">Expenses</TableCell>
+                        <TableCell align="right">Port Louis</TableCell>
+                        <TableCell align="right">Harare</TableCell>
+                        <TableCell align="right">Percentage Difference</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Taxi, price for 1 hour Waiting, Normal Tariff  </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item1 }</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem1 } </TableCell>
+                    </TableRow>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Average Monthly Net Salary, After Tax </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item2}</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem2 } </TableCell>
+                    </TableRow>
+
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Eggs, 12 pack  </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item3 }</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem3 } </TableCell>
+                    </TableRow>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Milk, Regular,1 liter </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item4 }</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem4} </TableCell>
+                    </TableRow>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Loaf of Fresh White Bread, 0.5 kg </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item5}</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem5} </TableCell>
+                    </TableRow>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Average Monthly Net Salary, After Tax </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item6}</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem6 } </TableCell>
+                    </TableRow>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}>Basic utilities for 85 square meter Apartment including Electricity, Heating or Cooling, Water and Garbage </TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item7 }</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem7 } </TableCell>
+                    </TableRow>
+                    <TableRow  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                        <TableCell component="th" scope="row" sx={{  color: "white" }}> Internet, 60 Mbps or More, Unlimited Data, Cable/ADSL</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}>{ item8 }</TableCell>
+                        <TableCell align="center" sx={{  color: "white" }}> { citem8} </TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </TableContainer>
+        </div>
+    );
+}
+
+
+
+
+
+
+

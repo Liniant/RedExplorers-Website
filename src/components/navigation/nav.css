@@ -1,0 +1,59 @@
+/*styling for navigation*/
+.nav{
+    font-size: 100%;
+    box-sizing: border-box;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 30%;
+}
+
+.logo{
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex:2;
+
+}
+
+.list-item{
+    font-weight: bold;
+    font-family: Roboto,sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.link{
+    text-decoration: none;
+    color:#FFA500;
+}
+
+
+
+/* responsive CSS */
+@media only screen and (max-width: 390px){
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo{
+        margin :0;
+    }
+
+    .list-item {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
